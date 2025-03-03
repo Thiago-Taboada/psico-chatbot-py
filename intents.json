@@ -1,0 +1,117 @@
+{
+  "intents": [
+    {
+      "tag": "saudacao",
+      "patterns": [
+        "Oi",
+        "Olá",
+        "E ai?",
+        "Bom dia",
+        "Boa tarde",
+        "Boa noite",
+        "Oi, tudo bem?",
+        "Como vai?",
+        "Oi, como você esta?",
+        "Olá, como esta seu dia?",
+        "Oi, prazer em conhecer você!"
+      ],
+      "responses": [
+        "Oi!",
+        "Olá!",
+        "Oi! Tudo bem?",
+        "Olá, como você esta?",
+        "Oi, que bom te ver aqui!",
+        "Oi! Como posso te ajudar?"
+      ]
+    },
+    {
+      "tag": "ansiedade",
+      "patterns": [
+        "Estou ansioso, o que posso fazer?",
+        "Como posso lidar com a ansiedade?",
+        "Sinto que estou muito ansioso, me ajude.",
+        "Tenho ansiedade, alguma dica?",
+        "O que fazer quando estou ansioso?",
+        "Como controlar a ansiedade?",
+        "Estou tendo uma crise de ansiedade, e agora?",
+        "Minha ansiedade esta alta, preciso de ajuda.",
+        "Quais técnicas ajudam na ansiedade?",
+        "Como reduzir a ansiedade no dia a dia?",
+        "Tem algum exercicio para ansiedade?",
+        "Ansiedade esta atrapalhando minha vida, o que faco?",
+        "Por que me sinto ansioso o tempo todo?",
+        "Sinto falta de ar quando estou ansioso, isso é normal?",
+        "Meu coração acelera quando fico ansioso, como resolver isso?",
+        "Como saber se minha ansiedade é grave?",
+        "Tenho pensamentos acelerados por causa da ansiedade, o que fazer?",
+        "Minha mente nao para, é ansiedade?",
+        "O que é um ataque de ansiedade?"
+      ],
+      "responses": [
+        "Respire fundo e tente focar no presente. técnicas de respiração, como inspirar profundamente pelo nariz e expirar lentamente pela boca, podem ajudar a acalmar a mente e reduzir os sintomas da ansiedade. Focar na respiração pode trazer um alivio imediato.",
+        "Pratique a respiração diafragmatica: inspire pelo nariz contando ate quatro, segure o ar por quatro segundos e depois expire lentamente pela boca. Essa tecnica ativa o sistema nervoso parassimpatico, ajudando a reduzir a sensação de ansiedade e trazer mais calma.",
+        "Se estiver se sentindo ansioso, tente fazer exercicios fisicos leves, como uma caminhada ao ar livre ou alguns alongamentos. O movimento ajuda a liberar endorfinas, que melhoram o humor e reduzem os niveis de estresse.",
+        "Ouvir musicas relaxantes ou praticar meditação guiada pode ajudar a reduzir a ansiedade e acalmar a mente. Escolha um ambiente tranquilo, feche os olhos e tente focar na sua respiração por alguns minutos.",
+        "Evite cafeina e alimentos muito estimulantes, pois podem aumentar os sintomas da ansiedade, como coração acelerado e inquietação. Prefira chas calmantes, como camomila ou erva-doce, que ajudam a relaxar.",
+        "Se possivel, fale com alguem de confianca sobre o que você esta sentindo. Conversar sobre seus sentimentos pode aliviar a carga emocional e ajudar a encontrar novas perspectivas sobre a situação que esta gerando ansiedade.",
+        "Anotar seus pensamentos em um diario pode ser uma estrategia util para entender melhor sua ansiedade. Escreva o que esta sentindo e tente identificar se ha algum gatilho especifico que esta causando essa emoção.",
+        "técnicas como mindfulness podem ajudar a reduzir a ansiedade ao focar no momento presente. Quando sentir que esta ansioso, tente observar ao seu redor, sentir os cheiros, texturas e sons, trazendo sua atenção para o aqui e agora.",
+        "Manter uma rotina equilibrada com exercicios fisicos, alimentação saudavel e um sono adequado pode ajudar a reduzir os niveis de ansiedade. Pequenas mudancas nos habitos diarios fazem uma grande diferenca a longo prazo.",
+        "A ansiedade pode ser controlada com habitos saudaveis e terapia. Se você sente que sua ansiedade esta afetando seu dia a dia, buscar acompanhamento psicologico pode ser uma otima opção para aprender estrategias de enfrentamento mais eficazes.",
+        "Se estiver tendo uma crise de ansiedade, tente o metodo 5-4-3-2-1: observe 5 coisas ao seu redor, toque em 4 objetos, identifique 3 sons, sinta 2 cheiros e pense em 1 gosto. Essa tecnica ajuda a trazer a mente para o presente e reduzir a intensidade da crise.",
+        "A ansiedade pode ser desafiadora, mas existem muitas estrategias para lidar com ela. você ja experimentou praticar atividades relaxantes, como ioga, pintura ou escrever? Encontrar algo que te traga prazer pode ajudar a distrair a mente e aliviar a tensao.",
+        "Se você sente que sua ansiedade esta interferindo nas suas atividades diarias, como trabalho, estudos ou vida social, é importante procurar um psicologo para entender melhor suas emocoes e desenvolver estrategias personalizadas para lidar com isso.",
+        "Lembre-se de que você nao esta sozinho. Muitas pessoas passam por situacoes similares e ha formas eficazes de lidar com a ansiedade. você pode encontrar apoio em grupos de ajuda ou conversar com profissionais especializados no assunto.",
+        "Escrever um diario pode ser uma forma eficaz de organizar seus pensamentos e identificar padroes na sua ansiedade. Tente registrar o que sente ao longo do dia e perceba quais situacoes desencadeiam a ansiedade com mais frequencia.",
+        "A ansiedade é uma resposta natural do corpo ao estresse, mas se ela estiver muito intensa e frequente, buscar ajuda profissional pode fazer toda a diferenca. Terapia cognitivo-comportamental é uma abordagem eficaz para tratar a ansiedade.",
+        "Se sua mente estiver muito agitada e cheia de pensamentos acelerados, tente praticar a tecnica de escrita livre. Pegue um papel e escreva tudo o que vier a sua cabeca, sem julgamentos. Isso pode ajudar a liberar a tensao mental.",
+        "Se sua ansiedade for frequente, pode ser util criar uma rotina de autocuidado, incluindo momentos de lazer e descanso. Separar um tempo para atividades prazerosas, como ler um livro ou assistir um filme, pode ajudar a aliviar o estresse do dia a dia."
+      ]
+    },
+    {
+      "tag": "tristeza",
+      "patterns": [
+        "Estou muito triste, o que posso fazer?",
+        "Sinto uma tristeza profunda, me ajude.",
+        "Nao consigo parar de me sentir triste, é normal?",
+        "O que fazer quando estou triste?",
+        "Como lidar com a tristeza?",
+        "Me sinto sozinho e triste, o que devo fazer?",
+        "Por que me sinto triste sem motivo?",
+        "A tristeza nao passa, isso é normal?",
+        "Tenho chorado muito ultimamente, o que significa?",
+        "O que fazer quando nada me faz feliz?",
+        "Estou sem vontade de fazer as coisas, é tristeza?",
+        "Como posso melhorar meu humor?",
+        "Estou triste o tempo todo, o que pode ser?",
+        "Como superar momentos de tristeza?",
+        "A tristeza pode se transformar em depressao?",
+        "é normal sentir um vazio dentro de mim?",
+        "O que posso fazer para me sentir melhor?",
+        "Nao consigo encontrar motivação para nada, o que faco?",
+        "Minha tristeza vem do nada, isso é comum?",
+        "Estou sem energia e desanimado, como posso mudar isso?"
+      ],
+      "responses": [
+        "Falar com alguem de confianca pode te ajudar a aliviar essa tristeza. As vezes, dividir o que estamos sentindo com outra pessoa pode trazer uma sensação de alivio e clareza. Se nao quiser falar com alguem proximo, escrever tambem pode ser uma boa alternativa.",
+        "Tente escrever sobre seus sentimentos, isso pode te ajudar a entender melhor o que esta acontecendo. Colocar os pensamentos no papel pode trazer organização mental e permitir que você veja as situacoes de um angulo diferente.",
+        "Saia um pouco, tome ar fresco, caminhar pode ajudar a melhorar seu humor. O contato com a natureza e o movimento do corpo estimulam o cerebro a liberar substancias que trazem bem-estar e aliviam a tensao emocional.",
+        "Permita-se sentir a tristeza, mas lembre-se de que ela nao define quem você é. Todos nos passamos por momentos dificeis, e sentir tristeza é parte da experiencia humana. O mais importante é nao se deixar afundar nesses sentimentos por muito tempo.",
+        "A musica pode ser uma grande aliada para melhorar o humor. Tente ouvir algo que te acalme ou anime. Algumas pessoas se sentem melhor ouvindo melodias suaves, enquanto outras preferem algo mais animado para mudar o estado emocional.",
+        "Praticar atividades prazerosas pode ajudar a aliviar a tristeza, como ler um livro, assistir um filme ou cozinhar algo gostoso. O importante é se reconectar com pequenas coisas que trazem alegria no dia a dia.",
+        "Se possivel, tente conversar com um amigo ou familiar. O apoio de pessoas queridas pode fazer a diferenca. Muitas vezes, apenas saber que alguem esta disposto a ouvir e oferecer suporte ja nos faz sentir melhor.",
+        "Cuidar de si mesmo é essencial. Tente dormir bem, comer de forma equilibrada e praticar atividades que gosta. Pequenas mudancas na rotina podem impactar bastante no bem-estar emocional a longo prazo.",
+        "A pratica de exercicios fisicos libera endorfinas e pode ajudar a melhorar o seu bem-estar emocional. Nao precisa ser nada intenso, uma caminhada leve ou alongamentos podem ser o suficiente para trazer uma sensação de alivio.",
+        "você ja tentou mudar sua rotina? Pequenas mudancas podem trazer novas perspectivas. As vezes, sair da monotonia e experimentar algo diferente pode ajudar a quebrar o ciclo da tristeza.",
+        "Tente listar coisas pelas quais você é grato. Isso pode te ajudar a enxergar o lado positivo das situacoes. Mesmo nos momentos mais dificeis, sempre ha algo pequeno que pode trazer gratidao e conforto.",
+        "Se sua tristeza estiver muito intensa e durando ha muito tempo, talvez seja importante procurar um psicologo para entender melhor o que esta acontecendo. Um profissional pode te ajudar a encontrar estrategias para lidar com esses sentimentos.",
+        "As vezes, um simples abraco ou um momento com alguem querido pode fazer toda a diferenca. O contato humano libera substancias que ajudam a aliviar a tristeza e trazer uma sensação de seguranca.",
+        "Se permita descansar, cuidar de si mesmo e respeitar seus sentimentos. você nao precisa estar bem o tempo todo. Aceitar suas emocoes e dar-se tempo para processa-las pode ser muito valioso.",
+        "Chorar pode ser uma forma de aliviar emocoes acumuladas, nao se culpe por sentir tristeza. As lagrimas sao um mecanismo natural do corpo para liberar tensao emocional e trazer alívio.",
+        "Faca algo que te traga conforto, como tomar um cha quente, ouvir sua musica favorita ou abracar um animal de estimação. Pequenos gestos de autocuidado podem fazer toda a diferenca no seu dia.",
+        "Tente se conectar com algo que te traga alegria, mesmo que seja apenas por alguns minutos. Assistir a um video engraçado, lembrar de um momento feliz ou se distrair com um hobby pode ajudar a quebrar o ciclo da tristeza.",
+        "você nao esta sozinho. Muitas pessoas passam por momentos assim, e sempre ha uma saida. Mesmo que agora pareca dificil, lembre-se de que seus sentimentos podem mudar e que ha ajuda disponivel para você."
+      ]
+    }
+  ]
+}
