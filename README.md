@@ -8,9 +8,15 @@
 ### Create an environment
 Whatever you prefer (e.g. `conda` or `venv`)
 ```console
-mkdir myproject
-$ cd myproject
+mkdir psico-chatbot
+$ cd psico-chatbot
 $ python3 -m venv venv
+```
+or
+```console
+mkdir psico-chatbot
+$ cd psico-chatbot
+$ python -m venv venv
 ```
 
 ### Activate it
