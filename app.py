@@ -6,6 +6,10 @@ from flask import Flask, request, jsonify
 from model import NeuralNet
 from nltk_utils import bag_of_words, tokenize
 
+import nltk
+nltk.download('punkt')
+nltk.download('rslp')
+
 sys.stdout.reconfigure(encoding='utf-8')
 
 # Iniciar a aplicação Flask
