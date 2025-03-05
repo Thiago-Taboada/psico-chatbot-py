@@ -11,6 +11,12 @@ sys.stdout.reconfigure(encoding='utf-8')
 
 app = Flask(__name__)
 
+# Códigos de cores ANSI
+CYAN = '\033[96m'
+GREEN = '\033[92m'
+YELLOW = '\033[93m'
+RESET = '\033[0m'  # Resetar a cor para o padrão
+
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 with open('intents.json', 'r', encoding='utf-8') as json_data:
@@ -36,7 +42,8 @@ def message():
     if not user_message:
         return jsonify({'error': 'Mensagem não identificada'}), 400
 
-    print(f"Mensagem: {user_message}")
+    # Exibir a mensagem do usuário em cor cyan
+    print(f"{CYAN}Mensagem: {user_message}{RESET}")
 
     sentence = tokenize(user_message)
     X = bag_of_words(sentence, all_words)
@@ -49,12 +56,24 @@ def message():
     
     top3_prob, top3_idx = torch.topk(probs, 3)
 
-    print("Tags mais provaveis:")
+    # Exibir as tags mais prováveis em cor verde para a primeira e amarela para as outras
+    print(f"{CYAN}Tags mais prováveis:{RESET}")
     for i in range(3):
         tag = tags[top3_idx[0][i].item()]
         prob = top3_prob[0][i].item()
-        print(f"{i+1}. Tag: {tag}, Prob: {prob:.4f}")
+        color = GREEN if i == 0 else YELLOW
+        print(f"{color}{i+1}. Tag: {tag}, Prob: {prob:.4f}{RESET}")
 
+    high_prob_tags = [(tags[top3_idx[0][i].item()], top3_prob[0][i].item()) for i in range(3) if top3_prob[0][i].item() > 0.75]
+
+    if len(high_prob_tags) > 1:
+        main_tag = high_prob_tags[0][0]
+        for intent in intents['intents']:
+            if main_tag == intent["tag"]:
+                response = random.choice(intent['responses'])
+                print(f"{CYAN}Resposta: Vamos focar em um tema por vez.\n{response}{RESET}")
+                return jsonify({'response': f"Vamos focar em um tema por vez.\n{response}"})
+    
     _, predicted = torch.max(output, dim=1)
     tag = tags[predicted.item()]
     prob = probs[0][predicted.item()]
@@ -63,12 +82,11 @@ def message():
         for intent in intents['intents']:
             if tag == intent["tag"]:
                 response = random.choice(intent['responses'])
-                # Imprimir la respuesta generada
-                print(f"Resposta: {response}")
+                print(f"{CYAN}Resposta: {response}{RESET}")
                 return jsonify({'response': response})
     else:
         response = "Desculpe, não entendi..."
-        print(f"Resposta: {response}")
+        print(f"{CYAN}Resposta: {response}{RESET}")
         return jsonify({'response': response})
 
 if __name__ == '__main__':
