@@ -1,7 +1,9 @@
 import numpy as np
+
 import nltk
-# nltk.download('punkt')
-# nltk.download('rslp')
+nltk.download('punkt')
+nltk.download('rslp')
+
 from nltk.stem import RSLPStemmer
 
 stemmer = RSLPStemmer()
