@@ -11,11 +11,10 @@ sys.stdout.reconfigure(encoding='utf-8')
 
 app = Flask(__name__)
 
-# Códigos de cores ANSI
 CYAN = '\033[96m'
 GREEN = '\033[92m'
 YELLOW = '\033[93m'
-RESET = '\033[0m'  # Resetar a cor para o padrão
+RESET = '\033[0m'
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
@@ -42,7 +41,6 @@ def message():
     if not user_message:
         return jsonify({'error': 'Mensagem não identificada'}), 400
 
-    # Exibir a mensagem do usuário em cor cyan
     print(f"{CYAN}Mensagem: {user_message}{RESET}")
 
     sentence = tokenize(user_message)
@@ -56,7 +54,6 @@ def message():
     
     top3_prob, top3_idx = torch.topk(probs, 3)
 
-    # Exibir as tags mais prováveis em cor verde para a primeira e amarela para as outras
     print(f"{CYAN}Tags mais prováveis:{RESET}")
     for i in range(3):
         tag = tags[top3_idx[0][i].item()]
