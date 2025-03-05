@@ -34,7 +34,9 @@ model.eval()
 def message():
     user_message = request.json.get('message')
     if not user_message:
-        return jsonify({'error': 'Mensaje no proporcionado'}), 400
+        return jsonify({'error': 'Mensagem não identificada'}), 400
+
+    print(f"Mensagem: {user_message}")
 
     sentence = tokenize(user_message)
     X = bag_of_words(sentence, all_words)
@@ -42,18 +44,32 @@ def message():
     X = torch.from_numpy(X).to(device)
 
     output = model(X)
-    _, predicted = torch.max(output, dim=1)
-
-    tag = tags[predicted.item()]
+    
     probs = torch.softmax(output, dim=1)
+    
+    top3_prob, top3_idx = torch.topk(probs, 3)
+
+    print("Tags mais provaveis:")
+    for i in range(3):
+        tag = tags[top3_idx[0][i].item()]
+        prob = top3_prob[0][i].item()
+        print(f"{i+1}. Tag: {tag}, Prob: {prob:.4f}")
+
+    _, predicted = torch.max(output, dim=1)
+    tag = tags[predicted.item()]
     prob = probs[0][predicted.item()]
 
     if prob.item() > 0.75:
         for intent in intents['intents']:
             if tag == intent["tag"]:
-                return jsonify({'response': random.choice(intent['responses'])})
+                response = random.choice(intent['responses'])
+                # Imprimir la respuesta generada
+                print(f"Resposta: {response}")
+                return jsonify({'response': response})
     else:
-        return jsonify({'response': "Desculpe, não entendi..."})
+        response = "Desculpe, não entendi..."
+        print(f"Resposta: {response}")
+        return jsonify({'response': response})
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=int(os.environ.get('PORT', 5000)))
