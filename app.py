@@ -4,12 +4,14 @@ import torch
 import sys
 import os
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 from model import NeuralNet
 from nltk_utils import bag_of_words, tokenize
 
 sys.stdout.reconfigure(encoding='utf-8')
 
 app = Flask(__name__)
+CORS(app)  # Habilita CORS para todas as rotas
 
 CYAN = '\033[96m'
 GREEN = '\033[92m'
@@ -34,6 +36,14 @@ model_state = data["model_state"]
 model = NeuralNet(input_size, hidden_size, output_size).to(device)
 model.load_state_dict(model_state)
 model.eval()
+
+@app.route('/message', methods=['OPTIONS'])
+def options():
+    response = jsonify()
+    response.headers.add("Access-Control-Allow-Origin", "*")
+    response.headers.add("Access-Control-Allow-Methods", "POST, OPTIONS")
+    response.headers.add("Access-Control-Allow-Headers", "Content-Type")
+    return response, 204
 
 @app.route('/message', methods=['POST'])
 def message():
@@ -87,4 +97,4 @@ def message():
         return jsonify({'response': response})
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=int(os.environ.get('PORT', 5000)))
+    app.run(host="0.0.0.0", port=int(os.environ.get('PORT', 80)))
