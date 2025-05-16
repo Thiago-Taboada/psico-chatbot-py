@@ -26,7 +26,7 @@ venv\Scripts\activate
 Execute:
 
 ```console
-pip install flask torch nltk numpy
+pip install flask flask_cors torch nltk numpy
 ```
 
 Se encontrar um erro na primeira execução, também será necessário instalar as dependências do nltk:
@@ -77,7 +77,7 @@ Isso iniciará o servidor Flask, que estará disponível em `http://localhost:50
 Requisição:
 
 - Tipo: **POST**.
-- URL: `http://localhost:5000/message`.
+- URL: `http://localhost/message`.
 - Body **raw JSON**
 
 Exemplo do Body:
