@@ -28,8 +28,9 @@ Execute:
 ```console
 pip install flask flask_cors torch nltk numpy
 ```
+Caso de erro tente istalar uma por vez.
 
-Se encontrar um erro na primeira execução, também será necessário instalar as dependências do nltk:
+Na primeira execução, também será necessário instalar as dependências do nltk:
 
 ```console
 python nltk_utils.py
@@ -70,7 +71,7 @@ Para ativar a API HTTP e permitir interações via requests, execute:
 python app.py
 ```
 
-Isso iniciará o servidor Flask, que estará disponível em `http://localhost:5000` (dependendo da configuração do seu ambiente).
+Isso iniciará o servidor Flask, que estará disponível em `http://localhost` (dependendo da configuração do seu ambiente).
 
 ## Exemplo de requisição
 
